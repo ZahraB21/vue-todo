@@ -1,6 +1,9 @@
 <template>
   <div class="todo-item" v-bind:class="{ 'is-complete': todo.complete }">
-    <p>{{todo.title}}</p>
+    <p>
+      <input type="checkbox" v-on:change="markComplete" />
+      {{todo.title}}
+    </p>
   </div>
 </template>
 
@@ -8,6 +11,11 @@
 export default {
   name: "TodoItem",
   props: ["todo"],
+  methods: {
+    markComplete() {
+      this.todo.complete = !this.todo.complete;
+    },
+  },
 };
 </script>
 
