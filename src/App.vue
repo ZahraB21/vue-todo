@@ -17,6 +17,8 @@ export default {
       todos: [
         { id: 1, title: "Todo 1", complete: false },
         { id: 2, title: "Todo 2", complete: true },
+        { id: 3, title: "Todo 3", complete: false },
+        { id: 4, title: "Todo 4", complete: true },
       ],
     };
   },
